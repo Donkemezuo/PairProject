@@ -149,7 +149,7 @@
         <!--Pokemon-->
         <scene sceneID="do3-Cc-dOR">
             <objects>
-                <viewController title="Pokemon" id="dbC-MH-smP" sceneMemberID="viewController">
+                <viewController title="Pokemon" id="dbC-MH-smP" customClass="PokemonVC" customModule="PairProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wNz-3d-tIb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +183,9 @@
                                             <constraint firstItem="ba2-xG-TuH" firstAttribute="leading" secondItem="mc9-Sn-w5t" secondAttribute="leadingMargin" id="U1x-i2-umg"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="ba2-xG-TuH" secondAttribute="bottom" id="lxP-eE-hxf"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pokemonCardImage" destination="ba2-xG-TuH" id="ZoK-L0-uEc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -197,6 +200,9 @@
                         <viewLayoutGuide key="safeArea" id="VMB-Wc-MEI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pokemon" id="F1O-3g-Pma"/>
+                    <connections>
+                        <outlet property="pokeCollectionView" destination="YkW-Cm-ORx" id="U7S-33-Q3r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7o-jk-kwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
