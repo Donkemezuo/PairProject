@@ -9,7 +9,8 @@
 import UIKit
 
 class DetailMagicVC: UIViewController {
-
+    @IBOutlet weak var magicCardsVC: DetailMagicCollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

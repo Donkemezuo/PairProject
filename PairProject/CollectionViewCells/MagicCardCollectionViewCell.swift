@@ -10,4 +10,6 @@ import UIKit
 
 class MagicCardCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var image: UIImageView!
+    
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="unw-ID-fNc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="unw-ID-fNc">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,6 +46,9 @@
                                             <constraint firstItem="HKH-J3-HGQ" firstAttribute="leading" secondItem="0GE-5T-iMW" secondAttribute="leadingMargin" constant="-8" id="vSX-Bq-9xV"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="HKH-J3-HGQ" secondAttribute="trailing" constant="-8" id="zIH-vA-tce"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="HKH-J3-HGQ" id="THM-Fc-IcD"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -60,6 +63,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Magic" id="n2K-1z-wT3"/>
+                    <connections>
+                        <outlet property="magicCardColletion" destination="c8E-Pn-icV" id="R9g-6y-uHd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +140,12 @@
                                             <constraint firstItem="oh3-lM-JkL" firstAttribute="top" secondItem="XSf-AG-cND" secondAttribute="bottom" id="nkV-Gy-C25"/>
                                             <constraint firstItem="oh3-lM-JkL" firstAttribute="leading" secondItem="vEE-jn-SZi" secondAttribute="leading" id="qfn-j8-yLC"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="language" destination="vEE-jn-SZi" id="S2Z-hE-kIm"/>
+                                            <outlet property="magicImage" destination="XSf-AG-cND" id="XzS-es-ExN"/>
+                                            <outlet property="name" destination="oh3-lM-JkL" id="Q0d-pM-8nT"/>
+                                            <outlet property="text" destination="Lfe-Cr-fBk" id="lCs-04-CLa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -141,6 +153,9 @@
                         <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bDl-gd-FbG"/>
                     </view>
+                    <connections>
+                        <outlet property="magicCardsVC" destination="ufu-Xy-MSP" id="rJr-xx-Xav"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZmQ-sw-eZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,6 +306,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="unw-ID-fNc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6tJ-zy-e8G">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
