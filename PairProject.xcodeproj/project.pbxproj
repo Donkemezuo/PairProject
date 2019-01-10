@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04914B3B21E6878C00748ED0 /* MagicCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04914B3A21E6878C00748ED0 /* MagicCardsModel.swift */; };
+		04914B3D21E689F300748ED0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04914B3C21E689F300748ED0 /* APIClient.swift */; };
 		4803108521E65D7E005C67F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803108421E65D7E005C67F2 /* AppDelegate.swift */; };
-		4803108721E65D7E005C67F2 /* MagicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803108621E65D7E005C67F2 /* MagicVC.swift */; };
+		4803108721E65D7E005C67F2 /* MagicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803108621E65D7E005C67F2 /* MagicViewController.swift */; };
 		4803108A21E65D7E005C67F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4803108821E65D7E005C67F2 /* Main.storyboard */; };
 		4803108C21E65D7F005C67F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4803108B21E65D7F005C67F2 /* Assets.xcassets */; };
 		4803108F21E65D7F005C67F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4803108D21E65D7F005C67F2 /* LaunchScreen.storyboard */; };
@@ -31,9 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04914B3A21E6878C00748ED0 /* MagicCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsModel.swift; sourceTree = "<group>"; };
+		04914B3C21E689F300748ED0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4803108121E65D7E005C67F2 /* PairProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PairProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4803108421E65D7E005C67F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4803108621E65D7E005C67F2 /* MagicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicVC.swift; sourceTree = "<group>"; };
+		4803108621E65D7E005C67F2 /* MagicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewController.swift; sourceTree = "<group>"; };
 		4803108921E65D7E005C67F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4803108B21E65D7F005C67F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4803108E21E65D7F005C67F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04914B3921E6874B00748ED0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04914B3A21E6878C00748ED0 /* MagicCardsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4803107821E65D7E005C67F2 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 		4803108321E65D7E005C67F2 /* PairProject */ = {
 			isa = PBXGroup;
 			children = (
+				04914B3921E6874B00748ED0 /* Models */,
 				4803108421E65D7E005C67F2 /* AppDelegate.swift */,
 				480310C221E68A87005C67F2 /* Model */,
 				480310BD21E66986005C67F2 /* ViewControllers */,
@@ -114,10 +127,11 @@
 		480310BD21E66986005C67F2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4803108621E65D7E005C67F2 /* MagicVC.swift */,
+				4803108621E65D7E005C67F2 /* MagicViewController.swift */,
 				480310AB21E6641B005C67F2 /* DetailMagicVC.swift */,
 				480310AD21E66431005C67F2 /* DetailPokemonVC.swift */,
 				4803109D21E65F99005C67F2 /* PokemonVC.swift */,
+				04914B3C21E689F300748ED0 /* APIClient.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,11 +250,14 @@
 				4803109E21E65F99005C67F2 /* PokemonVC.swift in Sources */,
 				480310A021E66105005C67F2 /* MagicCardCollectionViewCell.swift in Sources */,
 				480310AC21E6641B005C67F2 /* DetailMagicVC.swift in Sources */,
+				04914B3B21E6878C00748ED0 /* MagicCardsModel.swift in Sources */,
+				4803108721E65D7E005C67F2 /* MagicViewController.swift in Sources */,
 				4803108721E65D7E005C67F2 /* MagicVC.swift in Sources */,
 				480310C421E68CDA005C67F2 /* PokeApiClient.swift in Sources */,
 				4803108521E65D7E005C67F2 /* AppDelegate.swift in Sources */,
 				480310AA21E66231005C67F2 /* PokemonCollectionView.swift in Sources */,
 				4803109721E65DB6005C67F2 /* AppError.swift in Sources */,
+				04914B3D21E689F300748ED0 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
