@@ -40,6 +40,9 @@ class MagicVC: UIViewController {
         
     }
     
+    
+    
+    
 }
 
 extension MagicVC: UICollectionViewDataSource{
@@ -59,7 +62,6 @@ extension MagicVC: UICollectionViewDataSource{
         }
        
         return cell
-    
         
     }
     
@@ -71,4 +73,11 @@ extension MagicVC: UICollectionViewDelegateFlowLayout{
         return CGSize.init(width: 125, height: 200)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        
+        let magicCardViewController = storyBoard.instantiateViewController(withIdentifier: "MagicCards") as! DetailMagicVC
+        present(magicCardViewController, animated: true)
+        
+    }
 }

@@ -12,4 +12,7 @@ class MagicCardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     
+    override func prepareForReuse() {
+        image.image = UIImage.init(named: "magic")
+    }
 }
