@@ -9,5 +9,9 @@
 import UIKit
 
 class PokemonDetailCVC: UICollectionViewCell {
+    @IBOutlet weak var pokeCardImage: UIImageView!
+    @IBOutlet weak var attackName: UILabel!
+    @IBOutlet weak var attackDamageLvl: UILabel!
+    @IBOutlet weak var attackDescription: UITextView!
     
 }

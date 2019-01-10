@@ -22,7 +22,6 @@ class PokemonVC: UIViewController {
       pokeCollectionView.delegate = self
     pokeCollectionView.dataSource = self
         findCardCollection()
-        
     }
    private func findCardCollection(){
     PokeApiClient.searchPokemonCards { (appError, onlineCards) in
@@ -33,11 +32,8 @@ class PokemonVC: UIViewController {
 //            print("found \(onlineCards.count) pokemon cards")
             self.pokemoncards = onlineCards
         }
-        
     }
     }
-
-    
 }
 
 extension PokemonVC: UICollectionViewDataSource {
@@ -47,9 +43,7 @@ extension PokemonVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PC", for: indexPath) as? PokemonCardCollectionViewCell else {return UICollectionViewCell()}
-        //  guard let url = URL.init(string: myImages[indexPath.row]) else {return UICollectionViewCell()}
         let pokeCardsToSet = pokemoncards[indexPath.row]
-        //guard let url = URL.init(string: pokeCardsToSet.imageUrl) else {return UICollectionViewCell()}
         ImageHelper.shared.fetchImage(urlString: pokeCardsToSet.imageUrl) { (appError, image) in
             if let appError = appError {
                 print(appError.errorMessage())
@@ -62,15 +56,18 @@ extension PokemonVC: UICollectionViewDataSource {
         }
         return cell
     }
-
-
 }
-
 extension PokemonVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: 125, height: 200)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("it has been selected")
+       let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let pokemonViewController = storyBoard.instantiateViewController(withIdentifier: "PokemonCards") as! DetailPokemonVC
+        pokemonViewController.modalPresentationStyle = .overCurrentContext
+        let pokemonCard = pokemoncards[indexPath.row]
+        pokemonViewController.pokemonDetailcards = pokemonCard
+        present(pokemonViewController, animated: true)
     }
+    
 }
