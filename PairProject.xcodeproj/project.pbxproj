@@ -28,6 +28,8 @@
 		480310B221E664C5005C67F2 /* MagicDetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480310B121E664C5005C67F2 /* MagicDetailCVC.swift */; };
 		480310BA21E666CC005C67F2 /* DetailMagicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480310B921E666CC005C67F2 /* DetailMagicCollectionView.swift */; };
 		480310BC21E666DE005C67F2 /* DetailPokemonCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480310BB21E666DE005C67F2 /* DetailPokemonCollectionView.swift */; };
+		480310C121E68712005C67F2 /* AllPokeCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480310C021E68711005C67F2 /* AllPokeCardInfo.swift */; };
+		480310C421E68CDA005C67F2 /* PokeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480310C321E68CDA005C67F2 /* PokeApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		480310B121E664C5005C67F2 /* MagicDetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicDetailCVC.swift; sourceTree = "<group>"; };
 		480310B921E666CC005C67F2 /* DetailMagicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMagicCollectionView.swift; sourceTree = "<group>"; };
 		480310BB21E666DE005C67F2 /* DetailPokemonCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPokemonCollectionView.swift; sourceTree = "<group>"; };
+		480310C021E68711005C67F2 /* AllPokeCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPokeCardInfo.swift; sourceTree = "<group>"; };
+		480310C321E68CDA005C67F2 /* PokeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 			children = (
 				04914B3921E6874B00748ED0 /* Models */,
 				4803108421E65D7E005C67F2 /* AppDelegate.swift */,
+				480310C221E68A87005C67F2 /* Model */,
 				480310BD21E66986005C67F2 /* ViewControllers */,
 				4803108821E65D7E005C67F2 /* Main.storyboard */,
+				480310C321E68CDA005C67F2 /* PokeApiClient.swift */,
 				480310BE21E66AD4005C67F2 /* CollectionViews */,
 				480310BF21E66B04005C67F2 /* CollectionViewCells */,
 				4803108B21E65D7F005C67F2 /* Assets.xcassets */,
@@ -150,6 +156,14 @@
 				4803109F21E66105005C67F2 /* MagicCardCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		480310C221E68A87005C67F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				480310C021E68711005C67F2 /* AllPokeCardInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +240,7 @@
 				480310A221E66120005C67F2 /* PokemonCardCollectionViewCell.swift in Sources */,
 				480310AE21E66431005C67F2 /* DetailPokemonVC.swift in Sources */,
 				480310B021E664B3005C67F2 /* PokemonDetailCVC.swift in Sources */,
+				480310C121E68712005C67F2 /* AllPokeCardInfo.swift in Sources */,
 				480310BC21E666DE005C67F2 /* DetailPokemonCollectionView.swift in Sources */,
 				480310A821E66222005C67F2 /* MagicCollectionView.swift in Sources */,
 				4803109921E65DE6005C67F2 /* NetworkHelper.swift in Sources */,
@@ -237,6 +252,8 @@
 				480310AC21E6641B005C67F2 /* DetailMagicVC.swift in Sources */,
 				04914B3B21E6878C00748ED0 /* MagicCardsModel.swift in Sources */,
 				4803108721E65D7E005C67F2 /* MagicViewController.swift in Sources */,
+				4803108721E65D7E005C67F2 /* MagicVC.swift in Sources */,
+				480310C421E68CDA005C67F2 /* PokeApiClient.swift in Sources */,
 				4803108521E65D7E005C67F2 /* AppDelegate.swift in Sources */,
 				480310AA21E66231005C67F2 /* PokemonCollectionView.swift in Sources */,
 				4803109721E65DB6005C67F2 /* AppError.swift in Sources */,
