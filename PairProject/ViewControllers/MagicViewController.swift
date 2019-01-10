@@ -77,6 +77,8 @@ extension MagicVC: UICollectionViewDelegateFlowLayout{
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         
         let magicCardViewController = storyBoard.instantiateViewController(withIdentifier: "MagicCards") as! DetailMagicVC
+        magicCardViewController.modalPresentationStyle = .overCurrentContext
+        magicCardViewController.cardDetails = magicCards[indexPath.row]
         present(magicCardViewController, animated: true)
         
     }

@@ -10,56 +10,33 @@ import UIKit
 
 class DetailMagicVC: UIViewController {
     @IBOutlet weak var magicCardsVC: DetailMagicCollectionView!
-    var cardDetails = [MagicCardDetails](){
-        didSet {
-            DispatchQueue.main.async {
-                self.magicCardsVC.reloadData()
-            }
-        }
-    
-    }
+    var cardDetails: MagicCardDetails!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     magicCardsVC.delegate = self
     magicCardsVC.dataSource = self
-        getMagicCardInfo()
-    }
-    
-    
-    func getMagicCardInfo(){
-        MagicCardAPIClient.getMagicCard { (error, data) in
-            if let error = error {
-                print("Error: \(error)")
-            } else if let data = data {
-                self.cardDetails = data
-         
-            }
-        }
     }
     
     
     @IBAction func BackButton(_ sender: UIButton) {
         
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        navigationController?.popViewController(animated: true)
         
-        let magicCardViewController = storyBoard.instantiateViewController(withIdentifier: "magicVC") as! MagicVC
-        present(magicCardViewController, animated: true)
+        dismiss(animated: true, completion: nil)
         
     }
-    
-    
 }
 
 extension DetailMagicVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cardDetails.count
+        return cardDetails.foreignNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = magicCardsVC.dequeueReusableCell(withReuseIdentifier: "DetailMC", for: indexPath) as? MagicDetailCVC else {return UICollectionViewCell()}
-        let card = cardDetails[indexPath.row]
-        cell.language.text = card.foreignNames[indexPath.row].language
+        let card = cardDetails.foreignNames[indexPath.row]
+        cell.language.text = card.language
         cell.name.text = card.name
         cell.text.text = card.text
         ImageHelper.shared.fetchImage(urlString: card.imageUrl ?? "") { (error, imageData) in
@@ -71,8 +48,6 @@ extension DetailMagicVC: UICollectionViewDataSource{
         }
         return cell
     }
-    
-    
 }
 extension DetailMagicVC: UICollectionViewDelegateFlowLayout{
     
